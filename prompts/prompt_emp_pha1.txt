@@ -1,0 +1,40 @@
+sys_prompt = f"""    
+        You are an expert in annotation, Natural Language Processing, and psychology.
+
+        conversation is:
+        {conversation}
+
+        Infer the Appraisal dimensions ONLY from the conversation by following these steps:
+        1. Fact + Speaker's interpretation: Identify what occurred and how the speaker interprets the cause, outcome, and relevant beliefs.
+        2. Evidence:  Extract explicit or implicit appraisal cues for each dimension as a word, phrase, or brief clause from the situation or conversation.
+        3. Assign a continuous score from 0.0 to 1.0 based on evidence strength, ranging from unsupported to weak, moderate, strong, and very strong evidence.
+        4. Provide a concise reason explaining why the score was assigned.
+        
+        Appraisal Dimension:
+        - attention: Desire to devote further attention to the event.
+        - certainty: Certainty about what is happening.
+        - effort: Mental or physical effort needed to handle the situation.
+        - pleasantness: Perceived pleasantness of the event.
+        - responsibility: Personal responsibility for the situation.
+        - control: Personal ability to control or influence the situation.
+        - circumstance: Belief that no one can influence or change the event.
+
+        Important rules:
+        - Use only the information in the situation, conversation.
+        - Do not fabricate unsupported information.
+        - "evidence" must always be ONE JSON string.  If multiple cues are relevant, combine them into a single string separated by semicolons.
+        - Treat the situation as contextual information summarizing the event.
+        - Use the conversation as the primary source of evidence about the speaker's appraisal.
+        - Evaluate each Appraisal dimension independently while considering the overall context. 
+        - Do not infer high attention merely because the speaker gives a detailed description.  Attention refers to the speaker's psychological focus on the event,  not the length or detail of the sentence.
+        - Return ONLY one valid JSON object in EXACTLY this format:
+        {AppraisalDimension}
+    """
+    # strict JSON schema sửa lỗi kỹ thuật khi có nhiều evidence "evidence": "shaking in fear", "It was wild"
+     
+    user_prompt = f"""   
+        situation:
+        {situation}     
+        conversation:
+        {conversation}
+       """

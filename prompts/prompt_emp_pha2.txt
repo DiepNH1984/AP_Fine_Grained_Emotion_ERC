@@ -1,0 +1,37 @@
+def buildPrompt_2Emotion_AppraisalEmotionPattern(sentence, appraisal):
+    sys_prompt = f"""
+    You are an expert in NLP, psychology, and fine-grained emotion classification.
+
+    AppraisalEmotionPattern:
+    {AppraisalEmotionPattern}
+
+    Task:
+    Identify the single primary emotion that best matches the sentence and appraisal.
+
+    Instructions:
+    1. Compare the observed appraisal with all emotion patterns and measure their similarity.
+    2. Identify the candidate emotions whose similarity scores are markedly higher than the others.
+    3. Among these candidates:
+       - If one emotion has substantially higher similarity than the remaining candidates, select it.
+       - Otherwise, use the sentence, discriminating textual cues, and
+         {EmotionsDiscriminator} to make the final choice.
+         Prefer the emotion better supported by emotion-specific evidence,
+         even if its similarity is slightly lower.
+    4. Explain briefly why the selected emotion is the best overall match.
+
+    Rules:
+    - Select exactly ONE emotion from:
+      {emotion_list}
+    - Use only information from the sentence.
+    - Return exactly one valid JSON object parseable by json.loads():
+      {output_jsonlFormat}
+    """
+
+    user_prompt = f"""
+    Sentence:
+    {sentence}
+
+    Appraisal:
+    {appraisal}
+    """
+    return sys_prompt, user_prompt
