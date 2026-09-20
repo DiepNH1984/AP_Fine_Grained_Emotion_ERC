@@ -178,6 +178,18 @@ If you use this repository in academic research, please cite the corresponding p
 
 Citation information will be updated after publication.
 
+
+## Authors
+
+**Hoang-Diep Nguyen**, **Manh-Cuong Phan**, **Van-Quyet Nguyen**, and **Minh-Tien Nguyen**
+
+Hung Yen University of Technology and Engineering (UTEHY), Hung Yen, Vietnam.
+
+- Hoang-Diep Nguyen — `diepnh@utehy.edu.vn`
+- Manh-Cuong Phan — `cuongpm@spkt.edu.vn`
+- Van-Quyet Nguyen — `quyetic@utehy.edu.vn` · [ORCID: 0000-0002-6898-4224](https://orcid.org/0000-0002-6898-4224)
+- Minh-Tien Nguyen — `tiennm@utehy.edu.vn` · [ORCID: 0000-0002-5028-0608](https://orcid.org/0000-0002-5028-0608)
+
 ## License
 
 The code in this repository is provided for academic and research use.
