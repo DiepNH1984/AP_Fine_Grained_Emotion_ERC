@@ -57,3 +57,43 @@ AP_Fine_Grained_Emotion_ERC/
 │   └── Experimental outputs from different LLMs and prompting methods
 │
 └── README.md
+
+## Datasets
+
+Experiments are conducted on two datasets:
+
+- **EmpatheticDialogues** – conversational data with fine-grained emotion labels.
+- **EnISEAR** – emotion-related situations annotated with cognitive appraisal dimensions.
+
+Processed data used in the experiments is provided in the `data/` directory.
+
+Please refer to the original dataset sources and licenses before redistributing the data.
+
+---
+
+## LLM Backbones
+
+Experiments are conducted using multiple LLM backbones:
+
+- **GPT-4o-mini**
+- **Mistral Small**
+- **Qwen**
+
+For all experiments, `temperature = 0`; other decoding parameters use the corresponding API defaults.
+
+---
+
+## Prompts and Appraisal Patterns
+
+Prompt templates are stored in:
+
+```text
+prompts/
+
+## Authors
+Hoang-Diep Nguyen, Manh-Cuong Phan, Van-Quyet Nguyen, and Minh-Tien Nguyen
+Hung Yen University of Technology and Engineering (UTEHY), Hung Yen, Vietnam.
+Hoang-Diep Nguyen — diepnh@utehy.edu.vn
+Manh-Cuong Phan — cuongpm@spkt.edu.vn
+Van-Quyet Nguyen — quyetic@utehy.edu.vn · ORCID: 0000-0002-6898-4224
+Minh-Tien Nguyen — tiennm@utehy.edu.vn · ORCID: 0000-0002-5028-0608
