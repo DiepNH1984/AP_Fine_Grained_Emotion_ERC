@@ -1,0 +1,71 @@
+AppraisalEmotionPattern = {
+    "Anger": {
+        "attention": 0.80,
+        "certainty": 0.75,
+        "effort": 0.50,
+        "pleasantness": 0.00,
+        "responsibility": 0.10,
+        "control": 0.05,
+        "circumstance": 0.10
+    },
+
+    "Disgust": {
+        "attention": 0.45,
+        "certainty": 0.85,
+        "effort": 0.35,
+        "pleasantness": 0.00,
+        "responsibility": 0.15,
+        "control": 0.15,
+        "circumstance": 0.20
+    },
+
+    "Fear": {
+        "attention": 0.80,
+        "certainty": 0.15,
+        "effort": 0.80,
+        "pleasantness": 0.00,
+        "responsibility": 0.30,
+        "control": 0.20,
+        "circumstance": 0.45
+    },
+
+    "Guilt": {
+        "attention": 0.40,
+        "certainty": 0.80,
+        "effort": 0.30,
+        "pleasantness": 0.00,
+        "responsibility": 0.90,
+        "control": 0.60,
+        "circumstance": 0.10
+    },
+
+    "Joy": {
+        "attention": 0.95,
+        "certainty": 0.90,
+        "effort": 0.05,
+        "pleasantness": 0.95,
+        "responsibility": 0.40,
+        "control": 0.30,
+        "circumstance": 0.20
+    },
+
+    "Sadness": {
+        "attention": 0.75,
+        "certainty": 0.65,
+        "effort": 0.55,
+        "pleasantness": 0.00,
+        "responsibility": 0.05,
+        "control": 0.05,
+        "circumstance": 0.70
+    },
+
+    "Shame": {
+        "attention": 0.30,
+        "certainty": 0.75,
+        "effort": 0.35,
+        "pleasantness": 0.00,
+        "responsibility": 0.75,
+        "control": 0.45,
+        "circumstance": 0.10
+    }
+}

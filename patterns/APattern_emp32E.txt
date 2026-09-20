@@ -1,0 +1,325 @@
+AppraisalEmotionPattern={
+  "afraid": {
+    "attention": 0.88,
+    "certainty": 0.35,
+    "effort": 0.78,
+    "pleasantness": 0.05,
+    "responsibility": 0.15,
+    "control": 0.20,
+    "circumstance": 0.68
+  },
+  "angry": {
+    "attention": 0.82,
+    "certainty": 0.85,
+    "effort": 0.78,
+    "pleasantness": 0.05,
+    "responsibility": 0.15,
+    "control": 0.32,
+    "circumstance": 0.18
+  },
+  "annoyed": {
+    "attention": 0.62,
+    "certainty": 0.82,
+    "effort": 0.32,
+    "pleasantness": 0.18,
+    "responsibility": 0.15,
+    "control": 0.52,
+    "circumstance": 0.20
+  },
+  "anticipating": {
+    "attention": 0.85,
+    "certainty": 0.48,
+    "effort": 0.35,
+    "pleasantness": 0.52,
+    "responsibility": 0.20,
+    "control": 0.42,
+    "circumstance": 0.35
+  },
+  "anxious": {
+    "attention": 0.92,
+    "certainty": 0.20,
+    "effort": 0.78,
+    "pleasantness": 0.05,
+    "responsibility": 0.25,
+    "control": 0.15,
+    "circumstance": 0.62
+  },
+  "apprehensive": {
+    "attention": 0.78,
+    "certainty": 0.27,
+    "effort": 0.50,
+    "pleasantness": 0.12,
+    "responsibility": 0.20,
+    "control": 0.25,
+    "circumstance": 0.55
+  },
+  "ashamed": {
+    "attention": 0.48,
+    "certainty": 0.82,
+    "effort": 0.45,
+    "pleasantness": 0.05,
+    "responsibility": 0.88,
+    "control": 0.28,
+    "circumstance": 0.12
+  },
+  "caring": {
+    "attention": 0.84,
+    "certainty": 0.60,
+    "effort": 0.52,
+    "pleasantness": 0.55,
+    "responsibility": 0.42,
+    "control": 0.48,
+    "circumstance": 0.30
+  },
+  "confident": {
+    "attention": 0.60,
+    "certainty": 0.92,
+    "effort": 0.42,
+    "pleasantness": 0.82,
+    "responsibility": 0.68,
+    "control": 0.88,
+    "circumstance": 0.10
+  },
+  "content": {
+    "attention": 0.28,
+    "certainty": 0.86,
+    "effort": 0.12,
+    "pleasantness": 0.90,
+    "responsibility": 0.25,
+    "control": 0.62,
+    "circumstance": 0.20
+  },
+  "devastated": {
+    "attention": 0.88,
+    "certainty": 0.86,
+    "effort": 0.82,
+    "pleasantness": 0.01,
+    "responsibility": 0.12,
+    "control": 0.05,
+    "circumstance": 0.90
+  },
+  "disappointed": {
+    "attention": 0.62,
+    "certainty": 0.86,
+    "effort": 0.38,
+    "pleasantness": 0.08,
+    "responsibility": 0.22,
+    "control": 0.22,
+    "circumstance": 0.58
+  },
+  "disgusted": {
+    "attention": 0.38,
+    "certainty": 0.90,
+    "effort": 0.28,
+    "pleasantness": 0.01,
+    "responsibility": 0.10,
+    "control": 0.46,
+    "circumstance": 0.18
+  },
+  "embarrassed": {
+    "attention": 0.72,
+    "certainty": 0.72,
+    "effort": 0.46,
+    "pleasantness": 0.05,
+    "responsibility": 0.72,
+    "control": 0.28,
+    "circumstance": 0.18
+  },
+  "excited": {
+    "attention": 0.90,
+    "certainty": 0.62,
+    "effort": 0.58,
+    "pleasantness": 0.92,
+    "responsibility": 0.28,
+    "control": 0.58,
+    "circumstance": 0.20
+  },
+  "faithful": {
+    "attention": 0.58,
+    "certainty": 0.86,
+    "effort": 0.48,
+    "pleasantness": 0.66,
+    "responsibility": 0.68,
+    "control": 0.68,
+    "circumstance": 0.15
+  },
+  "furious": {
+    "attention": 0.96,
+    "certainty": 0.90,
+    "effort": 0.95,
+    "pleasantness": 0.00,
+    "responsibility": 0.10,
+    "control": 0.12,
+    "circumstance": 0.12
+  },
+  "grateful": {
+    "attention": 0.62,
+    "certainty": 0.90,
+    "effort": 0.22,
+    "pleasantness": 0.92,
+    "responsibility": 0.10,
+    "control": 0.32,
+    "circumstance": 0.22
+  },
+  "guilty": {
+    "attention": 0.78,
+    "certainty": 0.88,
+    "effort": 0.55,
+    "pleasantness": 0.04,
+    "responsibility": 0.96,
+    "control": 0.42,
+    "circumstance": 0.08
+  },
+  "hopeful": {
+    "attention": 0.78,
+    "certainty": 0.30,
+    "effort": 0.45,
+    "pleasantness": 0.80,
+    "responsibility": 0.22,
+    "control": 0.42,
+    "circumstance": 0.48
+  },
+  "impressed": {
+    "attention": 0.86,
+    "certainty": 0.88,
+    "effort": 0.22,
+    "pleasantness": 0.86,
+    "responsibility": 0.08,
+    "control": 0.28,
+    "circumstance": 0.18
+  },
+  "jealous": {
+    "attention": 0.90,
+    "certainty": 0.42,
+    "effort": 0.68,
+    "pleasantness": 0.04,
+    "responsibility": 0.18,
+    "control": 0.22,
+    "circumstance": 0.42
+  },
+  "joyful": {
+    "attention": 0.65,
+    "certainty": 0.86,
+    "effort": 0.28,
+    "pleasantness": 0.98,
+    "responsibility": 0.25,
+    "control": 0.62,
+    "circumstance": 0.18
+  },
+  "lonely": {
+    "attention": 0.62,
+    "certainty": 0.82,
+    "effort": 0.50,
+    "pleasantness": 0.04,
+    "responsibility": 0.20,
+    "control": 0.18,
+    "circumstance": 0.64
+  },
+  "nostalgic": {
+    "attention": 0.74,
+    "certainty": 0.88,
+    "effort": 0.22,
+    "pleasantness": 0.52,
+    "responsibility": 0.12,
+    "control": 0.08,
+    "circumstance": 0.84
+  },
+  "prepared": {
+    "attention": 0.80,
+    "certainty": 0.88,
+    "effort": 0.76,
+    "pleasantness": 0.64,
+    "responsibility": 0.74,
+    "control": 0.92,
+    "circumstance": 0.08
+  },
+  "proud": {
+    "attention": 0.62,
+    "certainty": 0.92,
+    "effort": 0.50,
+    "pleasantness": 0.92,
+    "responsibility": 0.90,
+    "control": 0.78,
+    "circumstance": 0.08
+  },
+  "sad": {
+    "attention": 0.52,
+    "certainty": 0.82,
+    "effort": 0.40,
+    "pleasantness": 0.04,
+    "responsibility": 0.18,
+    "control": 0.12,
+    "circumstance": 0.80
+  },
+  "sentimental": {
+    "attention": 0.68,
+    "certainty": 0.86,
+    "effort": 0.18,
+    "pleasantness": 0.64,
+    "responsibility": 0.12,
+    "control": 0.28,
+    "circumstance": 0.52
+  },
+  "surprised": {
+    "attention": 0.96,
+    "certainty": 0.08,
+    "effort": 0.22,
+    "pleasantness": 0.50,
+    "responsibility": 0.08,
+    "control": 0.18,
+    "circumstance": 0.48
+  },
+  "terrified": {
+    "attention": 0.98,
+    "certainty": 0.28,
+    "effort": 0.95,
+    "pleasantness": 0.00,
+    "responsibility": 0.08,
+    "control": 0.03,
+    "circumstance": 0.86
+  },
+  "trusting": {
+    "attention": 0.48,
+    "certainty": 0.92,
+    "effort": 0.18,
+    "pleasantness": 0.80,
+    "responsibility": 0.12,
+    "control": 0.58,
+    "circumstance": 0.18
+  }
+}
+EmotionsDicriminator= {
+  "afraid": "Fear in response to a specific perceived threat or danger; less intense than terrified.",
+  "angry": "Anger caused by a perceived wrong, harm, offense, or obstruction; stronger than annoyed but weaker than furious.",
+  "annoyed": "Mild irritation or anger caused by inconvenience, disturbance, or bothersome behavior.",
+  "anticipating": "Expecting or waiting for a future event, without necessarily implying a positive or negative outcome.",
+  "anxious": "Persistent worry and distress caused by uncertainty; stronger and more sustained than apprehensive.",
+  "apprehensive": "Uneasiness about a possible negative event that may happen in the future.",
+  "ashamed": "Negative evaluation of the self as flawed, inadequate, or unworthy; focused on the self rather than a specific action.",
+  "caring": "Concern for another person's well-being, often with a desire to help, protect, or support them.",
+  "confident": "Strong belief in one's ability, judgment, or likelihood of success.",
+  "content": "Calm satisfaction with the present situation; positive but low in emotional arousal.",
+  "devastated": "Extreme distress or sorrow caused by a severe loss or highly negative event.",
+  "disappointed": "Sadness or frustration because an outcome failed to meet prior expectations.",
+  "disgusted": "Strong aversion or repulsion toward a person, object, behavior, or situation.",
+  "embarrassed": "Social discomfort caused by perceived negative attention or evaluation from others.",
+  "excited": "Highly energized positive emotion involving enthusiasm or eagerness about an event or opportunity.",
+  "faithful": "Enduring loyalty and commitment to a person, relationship, promise, belief, or cause.",
+  "furious": "Extremely intense anger caused by a serious perceived wrong, offense, or harm.",
+  "grateful": "Thankfulness for a benefit, help, kindness, or valued outcome received from others.",
+  "guilty": "Negative evaluation of a specific wrongful or harmful action for which one feels responsible.",
+  "hopeful": "Positive expectation that a desired future outcome may occur despite uncertainty.",
+  "impressed": "Positive evaluation of another person, object, action, ability, or achievement as remarkable.",
+  "jealous": "Negative emotion caused by a perceived relational or comparative threat to something valued.",
+  "joyful": "Clear and strong happiness in response to a positive experience or outcome.",
+  "lonely": "Distress caused by a lack of desired social connection, closeness, or companionship.",
+  "nostalgic": "Emotional longing for meaningful people, places, or experiences from the past, often mixing positive and negative feelings.",
+  "prepared": "Feeling ready and capable of dealing with an expected future situation.",
+  "proud": "Positive evaluation of one's own achievement, qualities, identity, or those of someone closely associated with oneself.",
+  "sad": "General sorrow caused by loss or an undesirable outcome, without necessarily involving unmet expectations.",
+  "sentimental": "Tender emotional attachment to a personally meaningful person, object, memory, or experience.",
+  "surprised": "Reaction to an unexpected or expectation-violating event, which may be positive or negative.",
+  "terrified": "Extreme and overwhelming fear in response to a serious or difficult-to-control perceived threat.",
+  "trusting": "Belief that another person is reliable, safe, honest, or well-intentioned."
+}
+A
