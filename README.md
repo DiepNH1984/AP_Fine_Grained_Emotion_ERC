@@ -2,26 +2,30 @@
 
 **Appraisal Pattern Reasoning for Fine-Grained Emotion Recognition in Conversations**
 
-This repository provides the code, prompts, appraisal patterns, datasets, and experimental outputs for **fine-grained emotion recognition using Large Language Models (LLMs)**.
+This repository contains the code, prompts, appraisal patterns, datasets, and experimental outputs for studying **fine-grained emotion recognition with Large Language Models (LLMs)**.
 
-We compare conventional prompting methods with an **Appraisal Pattern (AP)** framework that incorporates cognitive appraisal dimensions to improve emotion reasoning and discrimination.
+The project compares conventional prompting approaches with an **Appraisal Pattern (AP)** framework that uses cognitive appraisal dimensions to support emotion reasoning and discrimination.
+
+---
 
 ## Methods
 
 We evaluate three prompting strategies:
 
-- **Zero-shot (ZS):** directly predicts the target emotion from the input.
+- **Zero-shot (ZS):** directly predicts the target emotion from the input text.
 - **Chain-of-Thought (CoT):** performs intermediate reasoning before emotion prediction.
-- **Appraisal Pattern (AP):** infers cognitive appraisal dimensions and compares the resulting appraisal profile with predefined emotion-specific patterns.
+- **Appraisal Pattern (AP):** reasons through cognitive appraisal dimensions and matches the resulting appraisal profile with predefined emotion-specific patterns.
 
 The AP framework uses seven appraisal dimensions:
 
 `attention`, `certainty`, `effort`, `pleasantness`, `responsibility`, `control`, and `circumstance`.
 
-For conversational emotion recognition, AP consists of two phases:
+For conversational emotion recognition, AP follows two main phases:
 
-1. **Phase I – Appraisal Extraction:** infer a seven-dimensional appraisal profile with supporting textual evidence.
-2. **Phase II – Emotion Prediction:** compare the appraisal profile with emotion-specific patterns and use contextual evidence to distinguish similar emotions.
+1. **Phase I – Appraisal Extraction:** infer a seven-dimensional appraisal profile from the input with supporting textual evidence.
+2. **Phase II – Emotion Prediction:** compare the inferred profile with emotion-specific appraisal patterns and use contextual evidence to resolve similar candidate emotions.
+
+---
 
 ## Repository Structure
 
@@ -38,7 +42,7 @@ AP_Fine_Grained_Emotion_ERC/
 │   ├── EnISEAR_corpus.csv
 │   ├── EnISEAR_corpus_fixed.jsonl
 │   ├── emp_chat.jsonl
-│   └── empatheticdialogue/
+│   └── empatheticdialogue
 │
 ├── patterns/
 │   ├── APatterm_emp32E.txt
@@ -50,6 +54,6 @@ AP_Fine_Grained_Emotion_ERC/
 │   └── prompt_enISEAR.txt
 │
 ├── results/
-│   └── Experimental outputs
+│   └── Experimental outputs from different LLMs and prompting methods
 │
 └── README.md
