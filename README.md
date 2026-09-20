@@ -1,23 +1,27 @@
-•	Tiêu đề Appraisal Pattern Reasoning for Fine-Grained Emotion Recognition in Conversations
-•	This repository contains: the code, prompts, appraisal patterns, datasets, and experimental results for fine-grained emotion recognition using Large Language Models (LLMs)
-•	 
-Build an Appraisal Pattern (AP) framework based on seven appraisal dimensions to enable LLMs to distinguish between closely related emotions in a structured, grounded manner, thereby improving performance compared to baseline, Zero-shot and CoT approaches. The Appraisal Pattern framework has 7 appraisal dimensions: 1. Attention 2. Certainty 3. Effort 4. Pleasantness 5. Responsibility 6. Control 7. Circumstance
-Set up: The project is implemented in Python and developed using Visual Studio Code.
-Installation
-Requirements: Python 3.10+, Visual Studio Code, Git, and the VS Code Python extension.
-git clone https://github.com/DiepNH1984/AP_Fine_Grained_Emotion_ERC.git
-cd AP_Fine_Grained_Emotion_ERC
+# AP Fine-Grained Emotion ERC
 
-python -m venv .venv
-.venv\Scripts\activate   # Windows
-# source .venv/bin/activate   # Linux/macOS
+**Appraisal Pattern Reasoning for Fine-Grained Emotion Recognition in Conversations**
 
-pip install -r requirements.txt
-Open the project in VS Code, select the .venv interpreter, and run:
-python <filename>.py
+This repository contains the code, prompts, appraisal patterns, datasets, and experimental outputs for studying **fine-grained emotion recognition with Large Language Models (LLMs)**.
 
+The project compares conventional prompting approaches with an **Appraisal Pattern (AP)** framework that uses cognitive appraisal dimensions to support emotion reasoning and discrimination.
 
-Experiments are conducted on **EmpatheticDialogues** and **EnISEAR** using multiple LLM backbones.
+## Methods
+
+We evaluate three prompting strategies:
+
+- **Zero-shot (ZS):** directly predicts the target emotion from the input text.
+- **Chain-of-Thought (CoT):** performs intermediate reasoning before emotion prediction.
+- **Appraisal Pattern (AP):** reasons through cognitive appraisal dimensions and matches the resulting appraisal profile with predefined emotion-specific patterns.
+
+The AP framework uses seven appraisal dimensions:
+
+`attention`, `certainty`, `effort`, `pleasantness`, `responsibility`, `control`, and `circumstance`.
+
+For conversational emotion recognition, AP follows two main phases:
+
+1. **Phase I – Appraisal Extraction:** infer a seven-dimensional appraisal profile from the input with supporting textual evidence.
+2. **Phase II – Emotion Prediction:** compare the inferred profile with emotion-specific appraisal patterns and use contextual evidence to resolve similar candidate emotions.
 
 ## Repository Structure
 
@@ -46,24 +50,99 @@ AP_Fine_Grained_Emotion_ERC/
 │   └── prompt_enISEAR.txt
 │
 ├── results/
-│   └── Experimental outputs from GPT-4o-mini, Mistral, and Qwen
+│   └── Experimental outputs from different LLMs and prompting methods
 │
 └── README.md
 ```
 
-The main evaluation metrics are:
+## Datasets
 
-- Accuracy
-- Macro-F1
-- Per-emotion Precision
-- Per-emotion Recall
-- Per-emotion F1-score
+Experiments are conducted on:
 
----
+- **EmpatheticDialogues** – conversational data with fine-grained emotion labels.
+- **EnISEAR** – emotion-related situations with cognitive appraisal annotations.
 
-## Requirements
+Processed data used by the experiments is provided in the `data/` directory.
 
-The main Python dependencies include:
+Please refer to the original dataset sources and licenses before redistributing the data.
+
+## LLM Backbones
+
+The experiments use multiple LLM families:
+
+- **GPT-4o-mini**
+- **Mistral Small**
+- **Qwen**
+
+For inference, `temperature = 0`; other decoding parameters use the corresponding API defaults.
+
+## Running the Experiments
+
+### EmpatheticDialogues
+
+Zero-shot / CoT:
+
+```bash
+python code/LLMs_CoT_ZeroShot_emp.py
+```
+
+Appraisal Pattern:
+
+```bash
+python code/LLMs_AP_continuous_emp.py
+```
+
+### EnISEAR
+
+Zero-shot / CoT:
+
+```bash
+python code/LLMs_CoT_ZeroShot_EnIS.py
+```
+
+Appraisal Pattern:
+
+```bash
+python code/LLMs_AP_continuous_EnIS.py
+```
+
+Before running the scripts, configure the required dataset paths and model API credentials.
+
+## Prompts and Appraisal Patterns
+
+Prompt templates are stored in:
+
+```text
+prompts/
+```
+
+Emotion-specific appraisal patterns are stored in:
+
+```text
+patterns/
+```
+
+These files contain the main prompting and appraisal knowledge used by the AP framework.
+
+## Results
+
+Model predictions and experimental outputs are stored in:
+
+```text
+results/
+```
+
+Results are organized across different combinations of:
+
+```text
+Dataset × LLM × Method
+```
+
+The primary evaluation metrics are **Accuracy** and **Macro-F1**, together with per-emotion Precision, Recall, and F1-score.
+
+## Environment
+
+The implementation is written in Python and mainly uses packages such as:
 
 ```text
 pandas
@@ -73,40 +152,34 @@ python-dotenv
 scikit-learn
 ```
 
-Install the required packages with:
+Example installation:
 
 ```bash
 pip install pandas numpy openai python-dotenv scikit-learn
 ```
 
-It is recommended to use Python 3.10 or later.
+## API Keys
 
----
+Do **not** store API keys directly in source files.
 
-## API Configuration
-
-Do not store API keys directly in the source code or upload them to GitHub.
-
-API credentials can be stored in a local `.env` file:
+A local `.env` file can be used for credentials, for example:
 
 ```env
-OPENAI_API_KEY=your_key_here
-MISTRAL_API_KEY=your_key_here
-QWEN_API_KEY=your_key_here
+OPENAI_API_KEY=your_api_key
+MISTRAL_API_KEY=your_api_key
+QWEN_API_KEY=your_api_key
 ```
 
-The `.env` file should be excluded from Git using `.gitignore`.
+Make sure `.env` is excluded from Git tracking.
 
----
+## Citation
 
-## Reproducibility
+If you use this repository in academic research, please cite the corresponding paper.
 
-To reproduce an experiment:
+Citation information will be updated after publication.
 
-1. Prepare the corresponding dataset in `data/`.
-2. Select the appropriate prompt from `prompts/`.
-3. Select the appraisal pattern file from `patterns/` for AP experiments.
-4. Configure the target LLM API.
-5. Run the corresponding Python script in `code/`.
-6. Save model predictions to `results/`.
-7. Evaluate predictions using Accuracy and Macro-F1.
+## License
+
+The code in this repository is provided for academic and research use.
+
+Datasets and external models remain subject to the licenses and terms of their original providers.
